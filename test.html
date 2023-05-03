@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <title>PUP HMYN</title>
+</head>
+
+<style>
+  
+  h1 {
+    color: rgb(255, 255, 255); 
+    background-image: linear-gradient(to right, rgba(78, 1, 1, 0.87), rgba(150, 26, 26, 0.89));
+    padding: 0px; 
+    margin-top: 0px;
+    text-align: center;
+    font-family: Georgia, serif 
+    
+  }
+
+  img{
+    height: 100px; 
+    vertical-align: middle; 
+    margin-left: 10px;
+    margin-right: 12px;
+    position: relative;
+  }
+
+  h2{
+    color: rgb(0, 0, 0); 
+    padding: 0px; 
+    margin-top: 0px;
+    text-align: center;
+    font-family: Georgia, serif 
+    
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url(pup\ icon.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;         
+  }
+
+  marquee {
+    text-align: center;
+    font-size: 28px;      
+  }
+
+  audio {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    background-image: linear-gradient(to right, rgba(59, 3, 3, 0.884), rgb(94, 0, 0));
+    border-radius: 10px;
+    padding: 10px; 
+  }
+
+  footer {
+    text-align: center;
+    font-size: 20px;
+  }
+ 
+</style>
+
+<body>
+
+<h1>
+<img src="PUPLogo.png" alt="logo"> Polytechnic University of the Philippines
+</h1>
+
+<h2>PUP HMYN</h2>
+  
+
+  <marquee id="lyrics" width="100%" direction="up" height="320px" scrollamount="1">  
+
+      <br>Sintang Paaralan</br>
+      <br>Tanglaw ka ng bayan</br>
+      <br>Pandayan ng isip ng kabataan</br>
+      <br>Kami ay dumating na salat sa yaman</br>
+      <br>Hanap na dunong ay iyong alay</br>
+      <br>Ang layunin mong makatao</br>
+      <br>Dinarangal ang Pilipino</br>
+      <br>Ang iyong aral, diwa, adhikang taglay</br>
+      <br>PUP, aming gabay</br>
+      <br>Paaralang dakila</br>
+      <br>PUP, pinagpala</br>
+      <br>Gagamitin ang karunungan</br>
+      <br>Mula sa iyo, para sa bayan</br>
+      <br>Ang iyong aral, diwa, adhikang taglay</br>
+      <br>PUP, aming gabay</br>
+      <br>Paaralang dakila</br>
+      <br>PUP, pinagpala</br>
+
+  </marquee>
+  
+  <audio id="puphymn" controls>
+    <source src="hymn.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+		
+		var marquee = document.getElementById("lyrics");
+		var audio = document.getElementById("puphymn");
+
+		marquee.stop(); 
+
+		audio.addEventListener("play", function() 
+		{
+			marquee.start(); 
+		});
+
+		audio.addEventListener("pause", function() 
+		{
+			marquee.stop();
+		});
+
+		audio.addEventListener("ended", function() 
+		{
+			marquee.stop(); 
+		});
+
+	</script>
+
+  <footer>
+    <p>Copyright © 2017 Polytechnic University of the Philippines</p>
+  </footer>
+
+</body>
+</html>
